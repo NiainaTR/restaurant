@@ -1,0 +1,37 @@
+import { CirclePlus, IceCreamBowl, Soup, Wine } from "lucide-react";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+
+function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , foodName:string ; foodType:string ; foodPrice:number})  {
+    return (
+        <div
+            className="relative group cursor-pointer overflow-hidden duration-500 w-[80vw] md:w-[30vw] lg:w-[32vw] m-2 h-[70vh] lg:h-[60vh] text-gray-50 bg-transparent rounded-xl mt-[10vh]"
+        >
+            <Link to='' className="absolute w-full h-full bg-black/50"></Link>
+            <img src={`./${foodId}.jpg`} alt="" className="w-full h-100 duration-500"/>
+            <div className="absolute top-[40%] left-[20%] duration-500 group-hover:translate-y-[-10px]">     
+                <p className="text-4xl">{foodName}</p>
+                <div className="flex flex-col gap-5">
+                    <div className="flex gap-3 mt-6 bg-white/30 px-5 py-2 rounded-full">
+                        {
+                            foodType === "dishes" ? 
+                            <><Soup />
+                            <h3 className="text-xl tracking-tighter">Plat</h3>
+                            </> : foodType === "desserts" ? <><IceCreamBowl />
+                            <h3 className="text-xl tracking-tighter">Dessert</h3>
+                            </> : <><Wine />
+                            <h3 className="text-xl tracking-tighter">Boisson</h3>
+                            </>
+                        }
+                    </div>
+                    <p className="text-2xl">{foodPrice} Ariary</p>
+                </div>
+            </div>
+            <Button className="absolute w-9 h-9 top-[80%] right-[10%] bg-white hover:bg-white  transition-transform duration-500 group-hover:translate-y-[10%] flex flex-col items-center justify-evenly">
+
+            </Button>
+        </div>
+    )
+}
+
+export default FoodCard
