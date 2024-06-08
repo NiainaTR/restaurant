@@ -15,11 +15,8 @@ function getRandomFoods(dishes:FoodType[] , desserts:FoodType[] , drinks:FoodTyp
 }
 
 
-
-
-
 function ListRandomFood() {
-    const {dishes , desserts , drinks , isLoading , error} = useContext(FoodsContext);
+    const {dishes , desserts , drinks} = useContext(FoodsContext);
     const randomFoods = getRandomFoods(dishes , desserts , drinks);
 
     const randomContainerRef = useRef(null);
@@ -33,8 +30,8 @@ function ListRandomFood() {
     }
     const handleMouseMoveRandomContainer = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         gsap.to(cursorBallRef.current , {
-            left:e.clientX - 20,
-            top:e.clientY + 50
+            left:e.clientX - 10,
+            top:e.clientY
         })
     }
 

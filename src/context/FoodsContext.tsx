@@ -42,6 +42,7 @@ export  const FoodsProvider = ({children}  : {children : ReactNode}) => {
 
     useEffect(() => {
         if(data){
+            console.log(data);
             setDishes(data.dishes);
             setDesserts(data.desserts);
             setDrinks(data.drinks);

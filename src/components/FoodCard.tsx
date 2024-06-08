@@ -1,4 +1,4 @@
-import { CirclePlus, IceCreamBowl, Soup, Wine } from "lucide-react";
+import { IceCreamBowl, ShoppingBag, Soup, Wine } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , 
         <div
             className="relative group cursor-pointer overflow-hidden duration-500 w-[80vw] md:w-[30vw] lg:w-[32vw] m-2 h-[70vh] lg:h-[60vh] text-gray-50 bg-transparent rounded-xl mt-[10vh]"
         >
-            <Link to='' className="absolute w-full h-full bg-black/50"></Link>
+            <Link to={`/food/${foodId}`} className="absolute w-full h-full bg-black/50"></Link>
             <img src={`./${foodId}.jpg`} alt="" className="w-full h-100 duration-500"/>
             <div className="absolute top-[40%] left-[20%] duration-500 group-hover:translate-y-[-10px]">     
                 <p className="text-4xl">{foodName}</p>
@@ -27,8 +27,8 @@ function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , 
                     <p className="text-2xl">{foodPrice} Ariary</p>
                 </div>
             </div>
-            <Button className="absolute w-9 h-9 top-[80%] right-[10%] bg-white hover:bg-white  transition-transform duration-500 group-hover:translate-y-[10%] flex flex-col items-center justify-evenly">
-
+            <Button className="absolute w-14 h-14 top-[80%] right-[10%] bg-white hover:bg-customSalmon  transition-transform duration-500 group-hover:translate-y-[10%] flex flex-col items-center justify-center">
+                <ShoppingBag className="text-black"/>
             </Button>
         </div>
     )
