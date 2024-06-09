@@ -2,35 +2,12 @@ import HeartCustom from './HeartCustom';
 import CommentCustom from './CommentCustom';
 import { Button } from './ui/button';
 import { ShoppingBag, Soup } from 'lucide-react';
-import {useEffect, useState } from 'react';
 import { FoodType } from '@/type/FoodType';
 
-
-
-function SingleFoodView({ id }: { id: number }) {
-    const [food , setFood] = useState<FoodType>({
-        id:0, 
-        type:"dishes",
-        name:"",
-        price:0,
-        description:"",
-        ingredients:{}
-    });
-    
-    useEffect(() => {
-        fetch('/data.json').then((response) => response.json())
-        .then((data) => {
-            const dataAll = [...data.dishes , ...data.desserts , ...data.drinks];
-            const fo = dataAll.find((fo:FoodType) => fo.id === id);
-            setFood(fo);
-        })
-    } , []);
-    
-
-
-    
+function SingleFoodView({food}: { food: FoodType | undefined }) {        
+    if(food === undefined) return <div className="maincard z-[3] w-full absolute h-screen flex items-center justify-center">Food introuvable</div>
     return (
-         <div className="maincard z-[3] w-full absolute h-screen flex items-center justify-center">
+        <div className="maincard z-[3] w-full absolute h-screen flex items-center justify-center">
         <div className="w-full md:w-[50vw] lg:w-[40vw] h-[100vh] absolute bg-black/20">
             <div className="w-full h-full flex items-center bg-black/40 justify-center">
                 <div className="w-full h-[50%] relative mb-12">

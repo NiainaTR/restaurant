@@ -24,15 +24,34 @@ function MenuWindow() {
               <Link to="/">Accueil</Link>
             </p>
           </div>
-        {["Menu", "A propos" , "Se connecter",  "Contacts"].map((text, index) => (
-          <div className="flex cursor-pointer" key={index}>
+          <div className="flex cursor-pointer">
             <p
               className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
             >
-              <Link to={`/${text}`}>{text}</Link>
+              <Link to="/menu">Menu</Link>
             </p>
           </div>
-        ))}
+          <div className="flex cursor-pointer">
+            <p
+              className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
+            >
+              <Link to="/apropos">A propos</Link>
+            </p>
+          </div>
+          <div className="flex cursor-pointer">
+            <p
+              className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
+            >
+              <Link to="/seconnecter">Se connecter</Link>
+            </p>
+          </div>
+          <div className="flex cursor-pointer">
+            <p
+              className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
+            >
+              <Link to="/contacts">Contacts</Link>
+            </p>
+          </div>
       </div>
     </div>
   ) : null;

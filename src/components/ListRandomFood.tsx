@@ -3,10 +3,10 @@ import { useContext, useRef } from "react"
 import FoodCard from "./FoodCard";
 import { FoodType } from "@/type/FoodType";
 import gsap from "gsap";
+import FoodCardLoader from "./FoodCardLoader";
 
-
-function getRandomFoods(dishes:FoodType[] , desserts:FoodType[] , drinks:FoodType[]) : FoodType[]{
-    const randomFoodTab = [...dishes , ...desserts , ...drinks];
+function getRandomFoods(foods:FoodType[]) : FoodType[]{
+    const randomFoodTab = [...foods];
     for(let i = randomFoodTab.length ; i > 0 ; i--){
         const j = Math.floor(Math.random() * (i+1));
         [randomFoodTab[i] , randomFoodTab[j]] = [randomFoodTab[j] , randomFoodTab[i]];
@@ -16,9 +16,8 @@ function getRandomFoods(dishes:FoodType[] , desserts:FoodType[] , drinks:FoodTyp
 
 
 function ListRandomFood() {
-    const {dishes , desserts , drinks} = useContext(FoodsContext);
-    const randomFoods = getRandomFoods(dishes , desserts , drinks);
-
+    const {foods , isLoading , error} = useContext(FoodsContext);
+    const randomFoods = getRandomFoods(foods);
     const randomContainerRef = useRef(null);
     const cursorBallRef = useRef(null);
 
@@ -35,6 +34,11 @@ function ListRandomFood() {
         })
     }
 
+    if(isLoading) return <div>Loading...</div>
+    
+    if(error) return <div>Error lors de chargement des données...</div>
+
+
    return (
     <div 
         className="w-full relative flex items-center justify-evenly flex-wrap px-[0.5vw] mt-[5vh]"
@@ -50,18 +54,24 @@ function ListRandomFood() {
             
         </div>
         {
-            randomFoods &&
-            randomFoods.map((food , index) => {
-                return (
-                    <FoodCard
-                        key={index}
-                        foodId={food.id}
-                        foodName={food.name}
-                        foodType={food.type}
-                        foodPrice={food.price}
-                    />
+               randomFoods.length === 0 ? (
+                    <p>Loading...</p>
+                ) : (
+                    randomFoods.map((food , index) => {
+                        if(food) return (
+                            <FoodCard
+                                key={index}
+                                foodId={food.id}
+                                foodName={food.name}
+                                foodType={food.type}
+                                foodPrice={food.price}
+                            />
+                        )
+                        else return (
+                            <FoodCardLoader key={index}></FoodCardLoader>
+                        )
+                    })
                 )
-            })
         }
     </div>
 )

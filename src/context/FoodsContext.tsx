@@ -3,25 +3,19 @@ import { FoodType } from "@/type/FoodType";
 import useSWR from "swr";
 
 
-type AllFoodsType = {
-    dishes:FoodType[];
-    desserts:FoodType[];
-    drinks:FoodType[]    
+type FetchDataType = {
+    foods:FoodType[]
 }
 
 
 type FoodsContextType = {
-    dishes:FoodType[];
-    desserts:FoodType[];
-    drinks:FoodType[];
+    foods:FoodType[];
     isLoading:boolean;
     error:Error
 }
 
 export const FoodsContext = createContext<FoodsContextType>({
-    dishes:[],
-    desserts:[],
-    drinks:[],
+    foods:[],
     isLoading:false,
     error:new Error()
 });
@@ -33,24 +27,18 @@ const fetcher = (url:string) => {
     );
 }
 
-export  const FoodsProvider = ({children}  : {children : ReactNode}) => {
-    const [dishes , setDishes] = useState<FoodType[]>([]);
-    const [desserts , setDesserts] = useState<FoodType[]>([]);
-    const [drinks , setDrinks] = useState<FoodType[]>([]);
-    
-    const {data , isLoading , error} = useSWR<AllFoodsType>('/data.json' , fetcher);
+export const FoodsProvider = ({children}  : {children : ReactNode}) => {
+    const [foods , setFoods] = useState<FoodType[]>([]);
+    const {data , isLoading , error} = useSWR<FetchDataType>('/data.json' , fetcher);
 
     useEffect(() => {
         if(data){
-            console.log(data);
-            setDishes(data.dishes);
-            setDesserts(data.desserts);
-            setDrinks(data.drinks);
+            setFoods(data.foods);
         }
     } , [data])
  
     return (
-        <FoodsContext.Provider value={{dishes , desserts , drinks , isLoading , error}}>
+        <FoodsContext.Provider value={{foods , isLoading , error}}>
             {children}
         </FoodsContext.Provider>
     )

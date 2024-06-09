@@ -2,7 +2,7 @@ import { IceCreamBowl, ShoppingBag, Soup, Wine } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
-function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , foodName:string ; foodType:string ; foodPrice:number})  {
+function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , foodName:string ; foodType:string ; foodPrice:number})  {    
     return (
         <div
             className="relative group cursor-pointer overflow-hidden duration-500 w-[80vw] md:w-[30vw] lg:w-[32vw] m-2 h-[70vh] lg:h-[60vh] text-gray-50 bg-transparent rounded-xl mt-[10vh]"

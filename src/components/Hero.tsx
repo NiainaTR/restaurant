@@ -2,9 +2,6 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 const allGeneralFood =  {
   dishes:[{"id" : 1 , "name": "Kimchi Jjigae"} , {"id" : 2 , "name": "Bibimbap"}],
   desserts:[{"id" : 7 , "name": "Hotteok"} , {"id" : 8 , "name": "Bingsu"}],
@@ -59,7 +56,7 @@ function Hero() {
             <div
               className="group relative inline-block cursor-pointer"
             >
-              <Link to="/fdfdf" className="absolute w-full h-[100%] top-0 left-0"></Link>
+              <Link to="/menu" className="absolute w-full h-[100%] top-0 left-0"></Link>
               <div className="w-[303px] md:w-[197px] lg:w-[297px] min-h-[50px] px-8 bg-customSalmon text-black rounded-[25px] flex items-center justify-between uppercase text-[12px] tracking-wider">
                 <div className="w-2 h-2 bg-black rounded-[50%]"></div>
                 <div>menu</div>
@@ -77,7 +74,7 @@ function Hero() {
                         className="flex flex-col items-center justify-center"
                       >
                         <div className="flex flex-col items-center justify-evenly cursor-pointer relative">
-                          <Link to='/p' className="absolute top-0 left-0 w-full h-[100%]"></Link>
+                          <Link to={`/food/${food.id}`} className="absolute top-0 left-0 w-full h-[100%]"></Link>
                           <img src={`./${food.id}.jpg`} alt="" className="w-[80%]"/>
                           <div className="mt-3">
                             <p className="uppercase font-medium text-black">{food.name}</p>
@@ -97,7 +94,7 @@ function Hero() {
             <div
               className="group relative inline-block cursor-pointer"
             >
-              <Link to="/fdfdf" className="absolute w-full h-[100%] top-0 left-0"></Link>
+              <Link to="/menu" className="absolute w-full h-[100%] top-0 left-0"></Link>
               <div className="w-[303px] md:w-[197px] lg:w-[297px] min-h-[50px] px-8 bg-customSalmon text-black rounded-[25px] flex items-center justify-between uppercase text-[12px] tracking-wider">
                 <div className="w-2 h-2 bg-black rounded-[50%]"></div>
                 <div>menu</div>
@@ -115,7 +112,7 @@ function Hero() {
                         className="flex flex-col items-center justify-center"
                       >
                         <div className="flex flex-col items-center justify-evenly cursor-pointer relative">
-                          <Link to='/p' className="absolute top-0 left-0 w-full h-[100%]"></Link>
+                          <Link to={`/food/${food.id}`} className="absolute top-0 left-0 w-full h-[100%]"></Link>
                           <img src={`./${food.id}.jpg`} alt="" className="w-[80%]"/>
                           <div className="mt-3">
                             <p className="uppercase font-medium text-black">{food.name}</p>
@@ -135,7 +132,7 @@ function Hero() {
             <div
               className="group relative inline-block cursor-pointer"
             >
-              <Link to="/fdfdf" className="absolute w-full h-[100%] top-0 left-0"></Link>
+              <Link to="/menu" className="absolute w-full h-[100%] top-0 left-0"></Link>
               <div className="w-[303px] md:w-[197px] lg:w-[297px] min-h-[50px] px-8 bg-customSalmon text-black rounded-[25px] flex items-center justify-between uppercase text-[12px] tracking-wider">
                 <div className="w-2 h-2 bg-black rounded-[50%]"></div>
                 <div>menu</div>
@@ -153,7 +150,7 @@ function Hero() {
                         className="flex flex-col items-center justify-center"
                       >
                         <div className="flex flex-col items-center justify-evenly cursor-pointer relative">
-                          <Link to='/p' className="absolute top-0 left-0 w-full h-[100%]"></Link>
+                          <Link to={`/food/${food.id}`} className="absolute top-0 left-0 w-full h-[100%]"></Link>
                           <img src={`./${food.id}.jpg`} alt="" className="w-[80%]"/>
                           <div className="mt-3">
                             <p className="uppercase font-medium text-black">{food.name}</p>
@@ -167,7 +164,6 @@ function Hero() {
             </div>
           </div>
         </div>
-        
       </div>
     </>
   )

@@ -19,7 +19,7 @@ function HeaderMenu({type , setType} : {type : string , setType : React.Dispatch
     <div className="w-full h-24 flex items-center justify-between">
         <section className="w-[30%] mx-4 z-40">
         <Select
-            defaultValue={"tous"}
+            defaultValue={type}
             onValueChange={(t) => setType(t)}
         >
           <SelectTrigger className="w-[160px] rounded-xl outline-none border-none">
