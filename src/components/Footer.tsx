@@ -1,7 +1,7 @@
 import { useTheme } from './theme-provider'
 import LogoDark from "../assets/logo-miso-dark.png";
 import LogoLight from "../assets/logo-miso-light.png";
-import { Bike, Facebook, Instagram, Linkedin, MapPin, Twitter, UsersRound } from 'lucide-react';
+import { Bike, Facebook, Github, Instagram, Linkedin, MapPin, Twitter, UsersRound } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import gsap from 'gsap';
@@ -66,8 +66,8 @@ function Footer() {
         <section className='w-full h-[20vh] flex flex-col items-center justify-center mt-[20vh] lg:mt-[10vh]'>
             <p className='text-xl p-[12vw] font-thin'>Ce site web représente une initiative expérimentale, visant à tester divers concepts. Il est important de noter que le restaurant associé à ce projet n'a pas encore ouvert ses portes et n'existe donc pas en tant qu'établissement physique à ce jour. </p>
         </section>  
-        <section className='w-full h-[20vh] flex flex-col items-center justify-center mt-[20vh] lg:mt-[10vh]'>
-            <p className='text-xl'>Developped by - NiainaTR</p>
+        <section className='w-full h-[20vh] flex items-center justify-center mt-[20vh] lg:mt-[10vh]'>
+            <p className='text-xl'>Developped by -</p> <Link to="https://github.com/NiainaTR" className='flex'><Github className='mx-2'/> NiainaTR</Link> 
         </section>  
     </div>
   )
