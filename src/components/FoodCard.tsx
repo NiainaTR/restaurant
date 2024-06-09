@@ -1,8 +1,20 @@
 import { IceCreamBowl, ShoppingBag, Soup, Wine } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FoodsCartContext } from "@/context/FoodsCartContext";
 
 function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , foodName:string ; foodType:string ; foodPrice:number})  {    
+    const {addFoodCart} = useContext(FoodsCartContext);
+    
+    const food = {
+        id: foodId, 
+        type: foodType,
+        name: foodName,
+        price: foodPrice,
+    }
+    
+
     return (
         <div
             className="relative group cursor-pointer overflow-hidden duration-500 w-[80vw] md:w-[30vw] lg:w-[32vw] m-2 h-[70vh] lg:h-[60vh] text-gray-50 bg-transparent rounded-xl mt-[10vh]"
@@ -27,7 +39,10 @@ function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , 
                     <p className="text-2xl">{foodPrice} Ariary</p>
                 </div>
             </div>
-            <Button className="absolute w-14 h-14 top-[80%] right-[10%] bg-white hover:bg-customSalmon  transition-transform duration-500 group-hover:translate-y-[10%] flex flex-col items-center justify-center">
+            <Button
+                onClick={() => addFoodCart(food , foodId)}
+                className="absolute w-14 h-14 top-[80%] right-[10%] bg-white hover:bg-customSalmon  transition-transform duration-500 group-hover:translate-y-[10%] flex flex-col items-center justify-center"
+            >
                 <ShoppingBag className="text-black"/>
             </Button>
         </div>

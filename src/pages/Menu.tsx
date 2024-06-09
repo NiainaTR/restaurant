@@ -1,13 +1,11 @@
 import HeaderMenu from "@/components/HeaderMenu";
 import SingleFoodMenu from "@/components/SingleFoodMenu";
-import { FoodsContext } from "@/context/FoodsContext";
 import { ToggleMenuContext } from "@/context/ToggleMenuContext";
 import { useContext, useEffect, useState } from "react";
 
 function Menu() {
   const [type , setType] = useState<string>("");
   const { isToggle , setIsToggle  } = useContext(ToggleMenuContext);
-
   
   useEffect(()=>{
     if(isToggle === true) setIsToggle(false);

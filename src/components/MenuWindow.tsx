@@ -35,13 +35,6 @@ function MenuWindow() {
             <p
               className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
             >
-              <Link to="/apropos">A propos</Link>
-            </p>
-          </div>
-          <div className="flex cursor-pointer">
-            <p
-              className="relative text-center text-[10vw] md:text-[5vw] lg:text-[5vw] leading-[90%] will-change-transform transition-letter-spacing duration-700 hover:tracking-[0.075em] uppercase"
-            >
               <Link to="/seconnecter">Se connecter</Link>
             </p>
           </div>

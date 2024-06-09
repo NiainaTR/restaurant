@@ -8,3 +8,4 @@ export type FoodType = {
     likes?:number,
     comments?:{}
 }
+

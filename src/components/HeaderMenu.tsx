@@ -11,8 +11,8 @@ import {
 import LogoDark from "../assets/logo-miso-dark.png";
 import ButtonMenu from './ButtonMenu'
 import ModeToggle from './mode-toggle'
-import { Button } from './ui/button'
-import { ShoppingBag } from "lucide-react";
+
+import ButtonCartWindow from "./ButtonCartWindow";
 
 function HeaderMenu({type , setType} : {type : string , setType : React.Dispatch<React.SetStateAction<string>>}) {  
   return (
@@ -40,8 +40,8 @@ function HeaderMenu({type , setType} : {type : string , setType : React.Dispatch
         <div 
             className="fixed top-5 right-5 w-[160px] lg:w-[200px] h-[50px] bg-white rounded-xl flex items-center justify-evenly z-40 mt-1" 
         >
-            <ButtonMenu></ButtonMenu>
-            <Button className="bg-transparent text-black hover:bg-transparent"><ShoppingBag /></Button>
+            <ButtonMenu/>
+            <ButtonCartWindow/>
             <ModeToggle></ModeToggle>           
         </div>
     </div>

@@ -5,9 +5,13 @@ import { Button } from "./ui/button"
 import {useContext, useEffect, useState } from "react";
 import { FoodType } from "@/type/FoodType";
 import { FoodsContext } from "@/context/FoodsContext";
+import { FoodsCartContext } from "@/context/FoodsCartContext";
 
 function SingleFoodMenu({type} : {type : string}) {
     const {foods , isLoading , error} = useContext(FoodsContext);
+
+    const {addFoodCart} = useContext(FoodsCartContext);
+    
     const [tabFoods , setTabFoods] = useState<FoodType[]>([]); 
     const [food , setFood] = useState<FoodType>({
         id:1, 
@@ -59,9 +63,6 @@ function SingleFoodMenu({type} : {type : string}) {
     </div>
     </div>
    )
-
-   
-
    return (
     <>
         {
@@ -72,9 +73,17 @@ function SingleFoodMenu({type} : {type : string}) {
                 <div className="w-full h-full flex items-center bg-black/40 justify-center">
                     <div className="w-full h-[50%] relative mb-12">
                         <div className="absolute right-5 h-full w-[60px] flex flex-col items-center justify-around rounded-sm">
-                            <HeartCustom />
+                            <HeartCustom likes={food.likes ? food.likes : 0} />
                             <CommentCustom />
-                            <Button className="w-[80px] h-[100px] mt-4 bg-red-500 rounded-xl text-white flex flex-col hover:bg-red-500 hover:scale-[1.1] transition-all duration-100 ease-in-out">
+                            <Button 
+                                onClick={() => addFoodCart({
+                                    id: food.id, 
+                                    type: food.type,
+                                    name: food.name,
+                                    price: food.price,
+                                } , food.id)}
+                                className="w-[80px] h-[100px] mt-4 bg-red-500 rounded-xl text-white flex flex-col hover:bg-red-500 hover:scale-[1.1] transition-all duration-100 ease-in-out"
+                            >
                                 <ShoppingBag />
                                 <p>Ajouter</p>
                             </Button>
@@ -87,8 +96,7 @@ function SingleFoodMenu({type} : {type : string}) {
                             </div>
                             <p className="text-3xl mt-3 mx-2 uppercase font-medium">{food.price} Ariary</p>
                             <p className="text-xl mt-3 mx-2 font-normal">{food.description}</p>
-                            <p className="text-sm mt-3 mx-2 font-normal">jfkdf:fdfdfd,fdfdfdfd:fdfdfdfd</p>
-                        </div>
+                       </div>
                         <div className="absolute bottom-[-25vh] w-full h-[20vh]  flex items-center justify-center">
                             <Button 
                                 className="w-[70px] h-[70px] bg-white hover:bg-white text-black group rounded-[100%]"
