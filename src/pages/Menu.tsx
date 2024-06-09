@@ -8,14 +8,17 @@ function Menu() {
   const [type , setType] = useState<string>("");
   const { isToggle , setIsToggle  } = useContext(ToggleMenuContext);
 
-  useEffect(() => {
-    setType("tous"); 
-  } , [])
   
   useEffect(()=>{
     if(isToggle === true) setIsToggle(false);
   } , []);
+
+  useEffect(() => {
+    setType("tous"); 
+  } , [])
   
+
+
   return (
     <div className="w-full h-screen">
       <div className="absolute top-0 left-0 z-[4] w-full h-[10vh]">

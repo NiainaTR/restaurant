@@ -4,7 +4,8 @@ import Menu from "./pages/Menu"
 import MenuWindow from "./components/MenuWindow"
 import FoodDetail from "./pages/FoodDetail"
 import NotFound from "./pages/NotFound"
-import { Login } from "./pages/login"
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/menu" element={<Menu/>}/>
           <Route path="/food/:id" element={<FoodDetail/>}/>
           <Route path="/seconnecter" element={<Login/>}/>
+          <Route path="/creercompte" element={<Signup/>}/>
           <Route path="/*" element={<NotFound/>}/>
         </Routes>    
     </>

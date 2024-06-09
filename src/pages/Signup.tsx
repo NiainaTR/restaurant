@@ -1,4 +1,3 @@
-import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -7,9 +6,8 @@ import Header from "@/components/Header"
 import { ToggleMenuContext } from "@/context/ToggleMenuContext"
 import { useContext, useEffect } from "react"
 
-
-export default function Login() {
-
+function Signup() {
+  
     const { isToggle , setIsToggle  } = useContext(ToggleMenuContext);
 
     useEffect(()=>{
@@ -24,9 +22,9 @@ export default function Login() {
       <div className="flex items-center justify-center py-24">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">Se connecter</h1>
+            <h1 className="text-3xl font-bold">Créer un compte</h1>
             <p className="text-balance text-muted-foreground">
-              Connecter à votre compte 
+              Créer mon compte 
             </p>
           </div>
           <div className="grid gap-4">
@@ -46,16 +44,16 @@ export default function Login() {
               <Input id="password" type="password" required />
             </div>
             <Button type="submit" className="w-full">
-              Se connecter
+              Créer mon compte
             </Button>
             <Button variant="outline" className="w-full">
-              Se connecter avec mon compte google
+              Créer un compte avec mon compte google
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">
-            Vous n&apos;avez pas encore de compte?{" "}
-            <Link to="/creercompte" className="underline">
-              Créer un compte
+             J&apos;ai deja un compte?{" "}
+            <Link to="/seconnecter" className="underline">
+              Se connecter à mon compte
             </Link>
           </div>
         </div>
@@ -63,3 +61,5 @@ export default function Login() {
     </div>
   )
 }
+
+export default Signup
