@@ -1,0 +1,277 @@
+{
+    "foods": [
+      {
+        "id": 1,
+        "type": "dishes",
+        "name": "Kimchi Jjigae",
+        "price": 15000,
+        "description": "Soupe épicée au kimchi avec du tofu et du porc.",
+        "ingredients": {
+          "kimchi": "200g",
+          "tofu": "100g",
+          "porc": "150g",
+          "oignon": "1",
+          "ail": "2 gousses"
+        },
+        "likes": 120,
+        "comments": {}
+      },
+      {
+        "id": 2,
+        "type": "dishes",
+        "name": "Bibimbap",
+        "price": 20000,
+        "description": "Riz mélangé avec des légumes, du bœuf et un œuf.",
+        "ingredients": {
+          "riz": "200g",
+          "bœuf": "100g",
+          "carotte": "50g",
+          "épinards": "50g",
+          "œuf": "1",
+          "gochujang": "2 cuillères à soupe"
+        },
+        "likes": 250,
+        "comments": {}
+      },
+      {
+        "id": 3,
+        "type": "dishes",
+        "name": "Japchae",
+        "price": 18000,
+        "description": "Nouilles de patate douce sautées avec des légumes et de la viande.",
+        "ingredients": {
+          "nouilles de patate douce": "200g",
+          "carotte": "50g",
+          "épinards": "50g",
+          "bœuf": "100g",
+          "champignons": "50g",
+          "sauce soja": "2 cuillères à soupe"
+        },
+        "likes": 130,
+        "comments": {}
+      },
+      {
+        "id": 4,
+        "type": "dishes",
+        "name": "Tteokbokki",
+        "price": 14000,
+        "description": "Gâteaux de riz épicés en sauce.",
+        "ingredients": {
+          "gâteaux de riz": "200g",
+          "sauce gochujang": "2 cuillères à soupe",
+          "oignon": "1",
+          "poivron": "50g",
+          "sucre": "1 cuillère à soupe"
+        },
+        "likes": 160,
+        "comments": {}
+      },
+      {
+        "id": 5,
+        "type": "dishes",
+        "name": "Samgyeopsal",
+        "price": 25000,
+        "description": "Tranches de porc grillées avec des accompagnements.",
+        "ingredients": {
+          "porc": "200g",
+          "ail": "3 gousses",
+          "sauce ssamjang": "2 cuillères à soupe",
+          "salade": "100g",
+          "huile de sésame": "1 cuillère à soupe"
+        },
+        "likes": 210,
+        "comments": {}
+      },
+      {
+        "id": 6,
+        "type": "dishes",
+        "name": "Bulgogi",
+        "price": 22000,
+        "description": "Bœuf mariné et grillé.",
+        "ingredients": {
+          "bœuf": "200g",
+          "sauce soja": "2 cuillères à soupe",
+          "sucre": "1 cuillère à soupe",
+          "ail": "2 gousses",
+          "poire": "50g"
+        },
+        "likes": 190,
+        "comments": {}
+      },
+      {
+        "id": 7,
+        "type": "desserts",
+        "name": "Hotteok",
+        "price": 8000,
+        "description": "Crêpes coréennes fourrées au sucre brun et aux noix.",
+        "ingredients": {
+          "farine": "200g",
+          "levure": "1 cuillère à café",
+          "sucre brun": "100g",
+          "noix": "50g",
+          "eau": "150ml"
+        },
+        "likes": 90,
+        "comments": {}
+      },
+      {
+        "id": 8,
+        "type": "desserts",
+        "name": "Bingsu",
+        "price": 12000,
+        "description": "Glace pilée avec des haricots rouges et des fruits.",
+        "ingredients": {
+          "glace pilée": "300g",
+          "haricots rouges": "100g",
+          "fraises": "50g",
+          "lait concentré": "2 cuillères à soupe"
+        },
+        "likes": 110,
+        "comments": {}
+      },
+      {
+        "id": 9,
+        "type": "desserts",
+        "name": "Mochi glacé",
+        "price": 10000,
+        "description": "Boules de riz gluant fourrées à la crème glacée.",
+        "ingredients": {
+          "riz gluant": "200g",
+          "sucre": "100g",
+          "crème glacée": "100g"
+        },
+        "likes": 150,
+        "comments": {}
+      },
+      {
+        "id": 10,
+        "type": "desserts",
+        "name": "Tteok",
+        "price": 7000,
+        "description": "Gâteaux de riz sucrés.",
+        "ingredients": {
+          "riz gluant": "200g",
+          "miel": "50g",
+          "poudre de soja": "50g"
+        },
+        "likes": 80,
+        "comments": {}
+      },
+      {
+        "id": 11,
+        "type": "desserts",
+        "name": "Yakgwa",
+        "price": 9000,
+        "description": "Biscuits au miel traditionnels.",
+        "ingredients": {
+          "farine": "200g",
+          "miel": "100g",
+          "huile de sésame": "50g",
+          "gingembre": "10g"
+        },
+        "likes": 70,
+        "comments": {}
+      },
+      {
+        "id": 12,
+        "type": "desserts",
+        "name": "Hwachae",
+        "price": 11000,
+        "description": "Salade de fruits coréenne.",
+        "ingredients": {
+          "melon": "100g",
+          "pastèque": "100g",
+          "lait": "200ml",
+          "sucre": "2 cuillères à soupe",
+          "fleurs comestibles": "10g"
+        },
+        "likes": 100,
+        "comments": {}
+      },
+      {
+        "id": 13,
+        "type": "drinks",
+        "name": "Sikhye",
+        "price": 5000,
+        "description": "Boisson sucrée à base de riz fermenté.",
+        "ingredients": {
+          "riz": "100g",
+          "eau": "1L",
+          "sucre": "50g",
+          "gingembre": "1 morceau"
+        },
+        "likes": 60,
+        "comments": {}
+      },
+      {
+        "id": 14,
+        "type": "drinks",
+        "name": "Soju",
+        "price": 12000,
+        "description": "Alcool coréen traditionnel.",
+        "ingredients": {
+          "eau": "750ml",
+          "riz": "150g",
+          "orge": "50g"
+        },
+        "likes": 200,
+        "comments": {}
+      },
+      {
+        "id": 15,
+        "type": "drinks",
+        "name": "Makgeolli",
+        "price": 10000,
+        "description": "Vin de riz traditionnel coréen.",
+        "ingredients": {
+          "riz gluant": "200g",
+          "eau": "1L",
+          "levure nuruk": "100g"
+        },
+        "likes": 140,
+        "comments": {}
+      },
+      {
+        "id": 16,
+        "type": "drinks",
+        "name": "Bori cha",
+        "price": 3000,
+        "description": "Thé à l'orge.",
+        "ingredients": {
+          "orge grillée": "50g",
+          "eau": "1L"
+        },
+        "likes": 90,
+        "comments": {}
+      },
+      {
+        "id": 17,
+        "type": "drinks",
+        "name": "Yuja cha",
+        "price": 8000,
+        "description": "Thé au yuzu.",
+        "ingredients": {
+          "yuzu": "100g",
+          "miel": "50g",
+          "eau": "1L"
+        },
+        "likes": 130,
+        "comments": {}
+      },
+      {
+        "id": 18,
+        "type": "drinks",
+        "name": "Baekseju",
+        "price": 15000,
+        "description": "Vin de riz médicinal coréen.",
+        "ingredients": {
+          "riz": "200g",
+          "eau": "750ml",
+          "ginseng": "50g"
+        },
+        "likes": 120,
+        "comments": {}
+      }
+    ]
+}
+  
