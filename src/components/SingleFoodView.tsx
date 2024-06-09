@@ -34,7 +34,7 @@ function SingleFoodView({ id }: { id: number }) {
         <div className="w-full md:w-[50vw] lg:w-[40vw] h-[100vh] absolute bg-black/20">
             <div className="w-full h-full flex items-center bg-black/40 justify-center">
                 <div className="w-full h-[50%] relative mb-12">
-                    <div className="absolute right-5 h-full w-[60px] bg-black flex flex-col items-center justify-around rounded-sm">
+                    <div className="absolute right-5 h-full w-[60px] flex flex-col items-center justify-around rounded-sm">
                         <HeartCustom />
                         <CommentCustom />
                         <Button className="w-[80px] h-[100px] mt-4 bg-red-500 rounded-xl text-white flex flex-col hover:bg-red-500 hover:scale-[1.1] transition-all duration-100 ease-in-out">

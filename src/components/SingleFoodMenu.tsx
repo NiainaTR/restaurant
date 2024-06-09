@@ -6,34 +6,10 @@ import {useEffect, useState } from "react";
 import { FoodType } from "@/type/FoodType";
 
 function SingleFoodMenu({type} : {type : string}) {
-    const [food , setFood] = useState<FoodType>({
-        id:0, 
-        type:"dishes",
-        name:"",
-        price:0,
-        description:"",
-        ingredients:{}
-    });
+
+    
     const [valueId , setValueId] = useState<number>(1);
     const [length , setLength] = useState(0);
-    
-    useEffect(() => {
-        fetch('/data.json').then((response) => response.json())
-        .then((data) => {
-            if(type === "tous"){
-                const dataAll = [...data.dishes , ...data.desserts , ...data.drinks];
-                const fo = dataAll.find((fo:FoodType) => fo.id === valueId);
-                setFood(fo);
-                setLength(dataAll.length);
-            }
-            else{
-                const dataAll = [...data.dishes , ...data.desserts , ...data.drinks];
-                const fo = dataAll.find((fo:FoodType) => fo.id === valueId && fo.type === type);
-                setFood(fo);
-                setLength(dataAll.length);    
-            }
-        })
-    } , [valueId]);
     
     const handleIncrementIdValue = () => {    
         const idvalue = valueId === length ? 6-length : valueId + 1;

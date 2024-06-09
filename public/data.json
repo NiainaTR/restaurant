@@ -1,5 +1,5 @@
 {
-    "dishes": [
+    "foods": [
       {
         "id": 1,
         "type": "dishes",
@@ -97,9 +97,7 @@
         },
         "likes": 190,
         "comments": {}
-      }
-    ],
-    "desserts": [
+      },
       {
         "id": 7,
         "type": "desserts",
@@ -189,9 +187,7 @@
         },
         "likes": 100,
         "comments": {}
-      }
-    ],
-    "drinks": [
+      },
       {
         "id": 13,
         "type": "drinks",
@@ -277,5 +273,5 @@
         "comments": {}
       }
     ]
-  }
+}
   
