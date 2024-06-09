@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NiainaTR.github.io/restaurant.git",
+  "homepage": "https://NiainaTR.github.io/restaurant",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
