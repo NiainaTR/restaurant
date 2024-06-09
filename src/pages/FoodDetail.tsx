@@ -9,7 +9,7 @@ function FoodDetail() {
     const {id} = useParams();
     const {foods , isLoading , error} = useContext(FoodsContext);
     const [food , setFood] = useState<FoodType | undefined>();
-    
+
     useEffect(() => {
         id ? setFood(foods.find(food => food.id === parseInt(id))) : setFood(undefined)
     } , [id , foods]);
