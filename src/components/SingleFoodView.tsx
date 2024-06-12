@@ -16,6 +16,7 @@ function SingleFoodView({food}: { food: FoodType | undefined }) {
         type: food.type,
         name: food.name,
         price: food.price,
+        number:0
     }
     return (
         <div className="maincard z-[3] w-full absolute h-screen flex items-center justify-center">

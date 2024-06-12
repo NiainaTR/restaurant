@@ -3,15 +3,17 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FoodsCartContext } from "@/context/FoodsCartContext";
+import { FoodCartItemType } from "@/type/FoodCartItemType";
 
 function FoodCard({foodId , foodName , foodType , foodPrice} : {foodId:number , foodName:string ; foodType:string ; foodPrice:number})  {    
     const {addFoodCart} = useContext(FoodsCartContext);
     
-    const food = {
+    const food : FoodCartItemType = {
         id: foodId, 
         type: foodType,
         name: foodName,
         price: foodPrice,
+        number:0
     }
     
 

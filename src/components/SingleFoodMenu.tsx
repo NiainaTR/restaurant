@@ -13,6 +13,7 @@ function SingleFoodMenu({type} : {type : string}) {
     const {addFoodCart} = useContext(FoodsCartContext);
     
     const [tabFoods , setTabFoods] = useState<FoodType[]>([]); 
+
     const [food , setFood] = useState<FoodType>({
         id:1, 
         type:"dishes",
@@ -81,6 +82,7 @@ function SingleFoodMenu({type} : {type : string}) {
                                     type: food.type,
                                     name: food.name,
                                     price: food.price,
+                                    number:0
                                 } , food.id)}
                                 className="w-[80px] h-[100px] mt-4 bg-red-500 rounded-xl text-white flex flex-col hover:bg-red-500 hover:scale-[1.1] transition-all duration-100 ease-in-out"
                             >

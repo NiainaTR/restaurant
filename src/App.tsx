@@ -11,6 +11,7 @@ import Contacts from "./pages/Contacts"
 
 
 function App() {
+  console.log("render");
   return (
     <>
         <MenuWindow></MenuWindow>

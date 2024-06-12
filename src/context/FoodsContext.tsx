@@ -35,8 +35,8 @@ export const FoodsProvider = ({children}  : {children : ReactNode}) => {
         if(data){
             setFoods(data.foods);
         }
-    } , [data])
- 
+    } , [data]);
+     
     return (
         <FoodsContext.Provider value={{foods , isLoading , error}}>
             {children}

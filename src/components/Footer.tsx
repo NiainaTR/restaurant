@@ -10,6 +10,7 @@ function Footer() {
   const {theme} = useTheme();
   const cursorBallRef = useRef(null);
   const containerRef = useRef(null);
+
   const handleMouserEnterRandomContainer = () => {
       gsap.to(cursorBallRef.current  , {opacity:1 , scale:1});
   }
@@ -59,14 +60,18 @@ function Footer() {
                     <Link to="" className='text-[16px] font-medium flex items-center mx-10 mt-4'><MapPin className='mr-3'/>Vente à  Ankorondrano</Link>
                     <Link to="" className='text-[16px] font-medium flex items-center mx-10 mt-4'><MapPin className='mr-3'/>Vente à  Ankadifotsy</Link>
                     <Link to="" className='text-[16px] font-medium flex items-center mx-10 mt-4'><Bike className='mr-3'/> Livraison à domicile</Link>
-                    <Link to="" className='text-[16px] font-medium flex items-center mx-10 mt-4'><UsersRound className='mr-3'/> Réseaux sociaux de culinaire</Link>
+                    <Link to="" className='text-[16px] font-medium flex items-center mx-10 mt-4'><UsersRound className='mr-3'/> Réseaux sociaux culinaire</Link>
                 </div>
             </div>
         </section>
-        <section className='w-full h-[20vh] flex flex-col items-center justify-center mt-[20vh] lg:mt-[10vh]'>
-            <p className='text-xl p-[12vw] font-thin'>Ce site web représente une initiative expérimentale, visant à tester divers concepts. Il est important de noter que le restaurant associé à ce projet n'a pas encore ouvert ses portes et n'existe donc pas en tant qu'établissement physique à ce jour. </p>
-        </section>  
-        <section className='w-full h-[20vh] flex items-center justify-center mt-[20vh] lg:mt-[10vh]'>
+        <section className='w-full h-[20vh] flex flex-col items-center justify-center mt-[30vh] lg:mt-[10vh]'>
+            <p className='text-xl p-[13vw] font-thin'>Ce site web représente une initiative expérimentale, visant à tester divers concepts. Il est important de noter que le restaurant associé à ce projet n'a pas encore ouvert ses portes et n'existe donc pas en tant qu'établissement physique à ce jour. </p>
+        </section>
+        <section className='w-full h-[20vh] flex flex-col items-center justify-center mt-[30vh] lg:mt-[10vh]'>
+            <p className='text-xl p-[13vw] font-thin'>이 웹사이트는 다양한 개념을 테스트하기 위한 실험적인 이니셔티브를 나타냅니다. 이 프로젝트와 관련된 레스토랑은 아직 문을 열지 않았으므로 현재까지 물리적 시설로 존재하지 않는다는 점에 유의하는 것이 중요합니다. </p>
+        </section>
+          
+        <section className='w-full h-[20vh] flex items-center justify-center mt-[20vh] lg:mt-[10vh] p-4'>
             <p className='text-xl'>Developped by -</p> <Link to="https://github.com/NiainaTR" className='flex'><Github className='mx-2'/> NiainaTR</Link> 
         </section>  
     </div>
